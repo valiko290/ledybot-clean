@@ -1,9 +1,0 @@
-services:
-  - type: web
-    name: ledybot-clean
-    env: python
-    plan: free
-    buildCommand: pip install -r requirements.txt
-    startCommand: uvicorn ledybot_webhook:app --host 0.0.0.0 --port $PORT
-    healthCheckPath: /health
-    autoDeploy: true
